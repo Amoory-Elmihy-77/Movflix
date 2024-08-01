@@ -1,0 +1,100 @@
+// import global styling
+@use './layout/global';
+// import variables
+@use './vars/vars' as *;
+// import mixins
+@use './helpers/mixins' as *;
+
+body{
+    background-color: $bg-color;
+}
+
+/*////////////////////////
+/// index style
+////////////////////////*/
+.index{
+    min-height: 100vh;
+    background-position: 50% 50%;
+    background-image: url('../imgs/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: -10;
+    }
+    header{
+        padding: $sm-padding;
+        @include flex-between;
+        button{
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 4px;
+            @include breakpoint(mobile){
+                display: none;
+            }
+        }
+    }
+    .content{
+        @include breakpoint(mobile){
+            width: 100%;
+            margin-top: 50px;
+            *{font-size: 22px;}
+        }
+        @include breakpoint(small){
+            *{font-size: 25px;}
+        }
+        color: $white;
+        text-align: center;
+        width: 80%;
+        margin: 150px auto;
+        .discover{
+            display: none;
+            @include breakpoint(mobile){
+                display: block;
+            }
+            button{
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+            }
+        }
+    }
+    .imgs{
+        padding: 20px;
+        width: 70%;
+        overflow: hidden;
+        position: absolute;
+        top: 430px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.562);
+        border-radius: 5px;
+        box-shadow: $shadow-3;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
+        @include breakpoint(mobile){
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            padding: 10px;
+            height: 60%;
+        }
+        img{
+            width: 100%;
+            height: 280px;
+            border-radius: 5px;
+            filter: grayscale(0.7);
+            transform: $transition-short;
+        }
+        img:hover{
+            filter: grayscale(0);
+        }
+    }
+}

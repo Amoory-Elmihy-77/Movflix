@@ -1,0 +1,61 @@
+// import variables
+@use '../vars/vars' as *;
+// import mixins
+@use '../helpers/mixins' as *;
+// call font family Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+button,
+input{
+    outline: 0;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    padding: $xsm-padding;
+    background-color: $primary;
+    color: $white;
+    transition: $transition-long;
+}
+button:hover{
+    background-color: $primary-variant;
+}
+
+html{
+    font-family: 'Poppins';
+}
+
+body{
+    padding-left: 200px;
+    padding-right: 200px;
+    @include breakpoint(mobile){
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @include breakpoint(small){
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include breakpoint(medium){
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: hsl(349, 100%, 43%);
+  color: hsl(0, 0%, 100%);
+  transition: 500ms ease;
+}
+
+button:hover {
+  background-color: rgb(126, 14, 34);
+}
+
+html {
+  font-family: "Poppins";
+}
+
+body {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+@media (max-width: 767px) {
+  body {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+body {
+  background-color: #222;
+}
+
+/*////////////////////////
+/// index style
+////////////////////////*/
+.index {
+  min-height: 100vh;
+  background-position: 50% 50%;
+  background-image: url("../imgs/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.index::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -10;
+}
+.index header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index header button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .index header button {
+    display: none;
+  }
+}
+.index .content {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  width: 80%;
+  margin: 150px auto;
+}
+@media (max-width: 767px) {
+  .index .content {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .index .content * {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .index .content * {
+    font-size: 25px;
+  }
+}
+.index .content .discover {
+  display: none;
+}
+@media (max-width: 767px) {
+  .index .content .discover {
+    display: block;
+  }
+}
+.index .content .discover button {
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.index .imgs {
+  padding: 20px;
+  width: 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 430px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.562);
+  border-radius: 5px;
+  box-shadow: 0 -10px 50px hsla(0, 0%, 100%, 0.603);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .index .imgs {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 10px;
+    height: 60%;
+  }
+}
+.index .imgs img {
+  width: 100%;
+  height: 280px;
+  border-radius: 5px;
+  filter: grayscale(0.7);
+  transform: 250ms ease;
+}
+.index .imgs img:hover {
+  filter: grayscale(0);
+}/*# sourceMappingURL=main.css.map */
