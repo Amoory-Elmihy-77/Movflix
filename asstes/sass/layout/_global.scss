@@ -25,10 +25,10 @@ li{
 button,
 input{
     outline: 0;
+    border: none;
 }
 
 button{
-    border: none;
     cursor: pointer;
     padding: $xsm-padding;
     background-color: $primary;
@@ -41,21 +41,4 @@ button:hover{
 
 html{
     font-family: 'Poppins';
-}
-
-body{
-    padding-left: 200px;
-    padding-right: 200px;
-    @include breakpoint(mobile){
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    @include breakpoint(small){
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-    @include breakpoint(medium){
-        padding-right: 60px;
-        padding-left: 60px;
-    }
 }
