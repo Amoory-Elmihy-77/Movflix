@@ -204,10 +204,10 @@ body{
                 }
             }
             a::before{
-                @include item-before;
+                @include item-before(250px);
             }
             a:hover::before{
-                height: 250px;
+                opacity: 1;
             }
             a:hover i{
                 opacity: 1;
@@ -258,10 +258,10 @@ body{
                 }
             }
             a::before{
-                @include item-before;
+                @include item-before(250px);
             }
             a:hover::before{
-                height: 250px;
+                opacity: 1;
             }
             a:hover i{
                 opacity: 1;
@@ -294,8 +294,8 @@ body{
                 }
             }
             a::before{
-                @include item-before;
-                height: 250px;
+                @include item-before(250px);
+                opacity: 1;
             }
         }
     }
