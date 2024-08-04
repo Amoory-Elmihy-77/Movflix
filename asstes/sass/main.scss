@@ -176,6 +176,128 @@ body{
             }
         }
     }
+    section{
+        margin: 50px 0 10px 0;
+        @include section-padding;
+    }
+    .trending,
+    .pop-movies,
+    .pop-series{
+        .heading{
+            @include heading;
+        }
+        .imgs{
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            a{
+                position: relative;
+                transition: $transition-long;
+                img{
+                    border-radius: 5px;
+                    width: 220px;
+                    height: 250px
+                }
+                i{
+                    @include play-icon;
+                }
+            }
+            a::before{
+                @include item-before;
+            }
+            a:hover::before{
+                height: 250px;
+            }
+            a:hover i{
+                opacity: 1;
+            }
+        }
+    }
+    .top-show,
+    .top-movies{
+        .heading{
+            @include heading;
+        }
+        .imgs{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 10px;
+            flex-wrap: wrap;
+            a{
+                position: relative;
+                transition: $transition-long;
+                width: 250px;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    border-radius: 5px;
+                }
+                i{
+                    @include play-icon;
+                }
+                .number{
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    color: $white;
+                    background-color: $bg-color;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border: 3px solid $white;
+                    width: 40px;
+                    height: 40px;
+                    @include flex-center;
+                    border-radius: 50%;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $white;
+                }
+            }
+            a::before{
+                @include item-before;
+            }
+            a:hover::before{
+                height: 250px;
+            }
+            a:hover i{
+                opacity: 1;
+            }
+        }
+    }
+    .upcoming{
+        .heading{
+            @include heading;
+        }
+        .imgs{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 10px;
+            flex-wrap: wrap;
+            a{
+                position: relative;
+                transition: $transition-long;
+                width: 300px;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    border-radius: 5px;
+                }
+                i{
+                    @include play-icon;
+                    opacity: 1;
+                    font-size: 35px;
+                }
+            }
+            a::before{
+                @include item-before;
+                height: 250px;
+            }
+        }
+    }
     footer{
         @include flex-between;
         justify-content: space-around;

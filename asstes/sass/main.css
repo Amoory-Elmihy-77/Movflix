@@ -10,6 +10,7 @@
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 li {
@@ -27,7 +28,7 @@ button {
   padding: 10px;
   background-color: hsl(349, 100%, 43%);
   color: hsl(0, 0%, 100%);
-  transition: 500ms ease;
+  transition: 0.5s;
 }
 
 button:hover {
@@ -36,6 +37,23 @@ button:hover {
 
 html {
   font-family: "Poppins";
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(349, 100%, 43%);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(126, 14, 34);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 body {
@@ -160,7 +178,7 @@ body {
   height: 280px;
   border-radius: 5px;
   filter: grayscale(0.7);
-  transform: 250ms ease;
+  transform: 0.3s;
 }
 .index .imgs img:hover {
   filter: grayscale(0);
@@ -246,7 +264,7 @@ body {
   border-radius: 15px;
   display: none;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: opacity 0.5s;
 }
 .home header nav #search i {
   color: hsl(250, 2%, 59%);
@@ -279,6 +297,235 @@ body {
   font-size: 20px;
   border-radius: 5px;
 }
+.home section {
+  margin: 50px 0 10px 0;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+@media (max-width: 767px) {
+  .home section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home section {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home section {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+.home .trending .heading,
+.home .pop-movies .heading,
+.home .pop-series .heading {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 10px 10px 20px;
+  border-left: 10px solid hsl(349, 100%, 43%);
+  margin-bottom: 10px;
+}
+.home .trending .imgs,
+.home .pop-movies .imgs,
+.home .pop-series .imgs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.home .trending .imgs a,
+.home .pop-movies .imgs a,
+.home .pop-series .imgs a {
+  position: relative;
+  transition: 0.5s;
+}
+.home .trending .imgs a img,
+.home .pop-movies .imgs a img,
+.home .pop-series .imgs a img {
+  border-radius: 5px;
+  width: 220px;
+  height: 250px;
+}
+.home .trending .imgs a i,
+.home .pop-movies .imgs a i,
+.home .pop-series .imgs a i {
+  position: absolute;
+  font-size: 30px;
+  color: hsl(44, 100%, 49%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.home .trending .imgs a::before,
+.home .pop-movies .imgs a::before,
+.home .pop-series .imgs a::before {
+  content: "";
+  overflow: hidden;
+  color: hsl(44, 100%, 49%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .trending .imgs a:hover::before,
+.home .pop-movies .imgs a:hover::before,
+.home .pop-series .imgs a:hover::before {
+  height: 250px;
+}
+.home .trending .imgs a:hover i,
+.home .pop-movies .imgs a:hover i,
+.home .pop-series .imgs a:hover i {
+  opacity: 1;
+}
+.home .top-show .heading,
+.home .top-movies .heading {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 10px 10px 20px;
+  border-left: 10px solid hsl(349, 100%, 43%);
+  margin-bottom: 10px;
+}
+.home .top-show .imgs,
+.home .top-movies .imgs {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.home .top-show .imgs a,
+.home .top-movies .imgs a {
+  position: relative;
+  transition: 0.5s;
+  width: 250px;
+}
+.home .top-show .imgs a img,
+.home .top-movies .imgs a img {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+}
+.home .top-show .imgs a i,
+.home .top-movies .imgs a i {
+  position: absolute;
+  font-size: 30px;
+  color: hsl(44, 100%, 49%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.home .top-show .imgs a .number,
+.home .top-movies .imgs a .number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: hsl(0, 0%, 100%);
+  background-color: #222;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.home .top-show .imgs a p,
+.home .top-movies .imgs a p {
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+}
+.home .top-show .imgs a::before,
+.home .top-movies .imgs a::before {
+  content: "";
+  overflow: hidden;
+  color: hsl(44, 100%, 49%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .top-show .imgs a:hover::before,
+.home .top-movies .imgs a:hover::before {
+  height: 250px;
+}
+.home .top-show .imgs a:hover i,
+.home .top-movies .imgs a:hover i {
+  opacity: 1;
+}
+.home .upcoming .heading {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 10px 10px 20px;
+  border-left: 10px solid hsl(349, 100%, 43%);
+  margin-bottom: 10px;
+}
+.home .upcoming .imgs {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.home .upcoming .imgs a {
+  position: relative;
+  transition: 0.5s;
+  width: 300px;
+}
+.home .upcoming .imgs a img {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+}
+.home .upcoming .imgs a i {
+  position: absolute;
+  font-size: 30px;
+  color: hsl(44, 100%, 49%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  opacity: 1;
+  font-size: 35px;
+}
+.home .upcoming .imgs a::before {
+  content: "";
+  overflow: hidden;
+  color: hsl(44, 100%, 49%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
 .home footer {
   display: flex;
   justify-content: space-between;
@@ -308,7 +555,7 @@ body {
   gap: 20px;
 }
 .home footer .links a {
-  transition: 250ms ease;
+  transition: 0.3s;
 }
 .home footer .links a:hover {
   color: hsl(250, 2%, 59%);

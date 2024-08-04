@@ -16,6 +16,7 @@
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 li{
@@ -41,4 +42,21 @@ button:hover{
 
 html{
     font-family: 'Poppins';
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $primary-variant;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
 }
