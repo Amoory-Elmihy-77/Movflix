@@ -53,7 +53,7 @@ get(trend_endpoint, (data) => {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         trending.innerHTML += `
-        <a href="#details.com">
+        <a href="details.com">
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
         </a>
@@ -66,7 +66,7 @@ get(popular_movies, (data) => {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         popMov.innerHTML += `
-        <a href="#details.com">
+        <a href="details.com">
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
         </a>
@@ -79,7 +79,7 @@ get(popular_series, (data) => {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         popSer.innerHTML += `
-        <a href="#details.com">
+        <a href="details.com">
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
         </a>
@@ -94,7 +94,7 @@ get(top_related, (data) => {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         topMov.innerHTML += `
-        <a href="#details.com">
+        <a href="details.com">
             <span class="number">${i}</span>
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
@@ -112,7 +112,7 @@ get(top_tvShow, (data) => {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         topShow.innerHTML += `
-        <a href="#details.com">
+        <a href="details.com">
             <span class="number">${i}</span>
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
