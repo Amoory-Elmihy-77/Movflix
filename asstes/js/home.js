@@ -1,4 +1,5 @@
 import {get} from './auth.js';
+import {showTrail} from './global.js';
 const api_key = "5002bf39d9190c90e9ee56559ae00842";
 const base_url = 'http://image.tmdb.org/t/p/';
 let poster_size = 'w342', backdrop_size = 'w780';
@@ -123,17 +124,34 @@ get(top_tvShow, (data) => {
     });
 });
 
-get(upcoming_movies, (data) => {
-    upcoming.innerHTML = '';
-    data.results.length = 4;
-    data.results.forEach(element => {
-        let data_poster = element.poster_path;
-        let img = `${base_url}${backdrop_size}${data_poster}`;
-        upcoming.innerHTML += `
-        <a>
+let arrToTrails = [];
+setTimeout(() => {
+    get(upcoming_movies, (data) => {
+        upcoming.innerHTML = '';
+        data.results.length = 4;
+        data.results.forEach(element => {
+            let data_poster = element.poster_path;
+            let img = `${base_url}${backdrop_size}${data_poster}`;
+            upcoming.innerHTML += `
+        <a id="${element.id}">
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
         </a>
         `;
+            ////////////////////////////////////////////////
+            arrToTrails.push(element.id);
+            /////////////////////////////////////////////////
+        });
     });
-});
+}, 0);
+
+setTimeout(() => {
+    let card = document.getElementById(arrToTrails[0]);
+    console.log(card, arrToTrails[0], arrToTrails, arrToTrails.length);
+    arrToTrails.forEach((ele) => {
+        let card = document.getElementById(ele);
+        card.addEventListener("click", () => {
+            showTrail(ele, api_key);
+        })
+    })
+}, 1000);

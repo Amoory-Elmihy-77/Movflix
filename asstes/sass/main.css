@@ -187,6 +187,9 @@ body {
 /*////////////////////////
 /// home style
 ////////////////////////*/
+.home {
+  position: relative;
+}
 .home header {
   padding-left: 200px;
   padding-right: 200px;
@@ -373,7 +376,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: opacity 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,7 +464,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: opacity 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,7 +523,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: opacity 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -560,4 +563,67 @@ body {
 }
 .home footer .links a:hover {
   color: hsl(250, 2%, 59%);
+}
+.home #trailers {
+  padding: 20px 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 222;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.home #trailers .close {
+  width: 70%;
+  text-align: end;
+}
+@media (max-width: 767px) {
+  .home #trailers .close {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home #trailers .close {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home #trailers .close {
+    width: 90%;
+  }
+}
+.home #trailers .close i {
+  font-size: 30px;
+  color: hsl(250, 2%, 59%);
+  cursor: pointer;
+}
+.home #trailers .trail-container {
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+}
+@media (max-width: 767px) {
+  .home #trailers .trail-container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home #trailers .trail-container {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home #trailers .trail-container {
+    width: 90%;
+  }
+}
+.home #trailers .trail-container iframe {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
