@@ -27,12 +27,12 @@ const related = document.querySelector('.related .imgs');
 
 // fetch api
 fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}`).then(response => response.json()).then(data => {
-    // console.log(data);
-    let data_poster = data.backdrop_path;
-    let title = data.title;
+    console.log(data);
+    let data_poster = data.poster_path || data.profile_path || data.backdrop_path;
+    let title = data.title || data.name;
     let overview = data.overview;
     let type1 = data.genres[0].name;
-    let type2 = data.genres[1].name;
+    let type2 = data.genres[data.genres.length -1].name;
     document.querySelector('.details header .title').innerHTML = title;
     document.querySelector('.details header .type1').innerHTML = type1;
     document.querySelector('.details header .type2').innerHTML = type2;

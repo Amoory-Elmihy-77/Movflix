@@ -268,6 +268,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: relative;
+  z-index: 100;
 }
 .home header nav #search input,
 .details header nav #search input {
@@ -290,6 +292,35 @@ body {
 .home header nav #search .close,
 .details header nav #search .close {
   display: none;
+}
+.home header nav #search #res,
+.details header nav #search #res {
+  position: absolute;
+  top: 55px;
+  right: -2px;
+  background-color: white;
+  width: 300px;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+.home header nav #search #res a,
+.details header nav #search #res a {
+  display: flex;
+}
+.home header nav #search #res a:not(:last-child),
+.details header nav #search #res a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.home header nav #search #res a img,
+.details header nav #search #res a img {
+  width: 50px;
+  height: 60px;
+  margin-right: 15px;
+}
+.home header nav #search #res a .info,
+.details header nav #search #res a .info {
+  padding-top: 3px;
 }
 .home header .details,
 .details header .details {

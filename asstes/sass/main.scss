@@ -132,6 +132,8 @@ body{
             #search{
                 @include flex-center;
                 gap: 10px;
+                position: relative;
+                z-index: 100;
                 input{
                     background-color: transparent;
                     padding: $xsm-padding;
@@ -150,6 +152,30 @@ body{
                 }
                 .close{
                     display: none
+                }
+                #res{
+                    position: absolute;
+                    top: 55px;
+                    right: -2px;
+                    background-color: white;
+                    width: 300px;
+                    max-height: 220px;
+                    overflow-y: auto;
+                    border-radius: 8px;
+                    a{
+                        display: flex;
+                        &:not(:last-child){
+                            margin-bottom: 10px;
+                        }
+                        img{
+                        width: 50px;
+                        height: 60px;
+                        margin-right: 15px;
+                    }
+                    .info{
+                        padding-top: 3px;
+                    }
+                    }
                 }
             }
         }
@@ -376,41 +402,34 @@ body{
         }
     }
     .related{
-        .heading {
-                @include heading;
-            }
-        
-            .imgs {
-                display: flex;
-                gap: 10px;
-                overflow-x: auto;
-        
-                a {
-                    position: relative;
-                    transition: $transition-long;
-        
-                    img {
-                        border-radius: 5px;
-                        width: 220px;
-                        height: 250px
-                    }
-        
-                    i {
-                        @include play-icon;
-                    }
+        .heading{
+            @include heading;
+        }
+        .imgs{
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            a{
+                position: relative;
+                transition: $transition-long;
+                img{
+                    border-radius: 5px;
+                    width: 220px;
+                    height: 250px
                 }
-        
-                a::before {
-                    @include item-before(250px);
-                }
-        
-                a:hover::before {
-                    opacity: 1;
-                }
-        
-                a:hover i {
-                    opacity: 1;
+                i{
+                    @include play-icon;
                 }
             }
+            a::before{
+                @include item-before(250px);
+            }
+            a:hover::before{
+                opacity: 1;
+            }
+            a:hover i{
+                opacity: 1;
+            }
+        }
     }
 }
