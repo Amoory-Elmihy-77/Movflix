@@ -39,6 +39,7 @@ function handleSearch() {
         searchClose.style.display = 'block';
         searchInput.style.display = 'block';
         searchInput.style.opacity = '1';
+        res.style.display = 'block';
         searchInput.focus();
     });
     searchClose.addEventListener("click", () => {
@@ -46,6 +47,7 @@ function handleSearch() {
         searchClose.style.display = 'none';
         searchInput.style.opacity = '0';
         searchInput.style.display = 'none';
+        res.style.display = 'none';
     });
     const apiKey = "5002bf39d9190c90e9ee56559ae00842";
     searchInput.addEventListener("input", ()=>{
