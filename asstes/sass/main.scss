@@ -96,12 +96,12 @@ body{
 /*////////////////////////
 /// home style
 ////////////////////////*/
-.home{
+.home,
+.details{
     position: relative;
     header{
         @include section-padding;
         position: relative;
-        // background-image: url(../imgs/slider-banner.jpg);
         background-size: cover;
         background-position: top;
         & *{
@@ -178,7 +178,8 @@ body{
             }
         }
     }
-    section{
+    section,
+    .upcoming{
         margin: 50px 0 10px 0;
         @include section-padding;
     }
@@ -332,5 +333,84 @@ body{
     }
     #trailers{
         @include trailer;
+    }
+}
+
+/*////////////////////////
+/// details style
+////////////////////////*/
+
+.details{
+    header{
+        .details{
+            .type{
+                span{
+                    background-color: $primary-variant;
+                    color: $white;
+                    padding: 5px;
+                    border-radius: 15px;
+                    &:first-child{
+                        margin-right: 20px;
+                    }
+                }
+                margin-bottom: 30px;
+            }
+            .overview{
+                color: $white;
+            }
+            .on{
+                button{
+                    border-radius: 6px;
+                }
+                #play{
+                    i{
+                        margin-right: 10px;
+                    }
+                    margin-right: 20px;
+                }
+                #trail{
+                    background-color: transparent;
+                    border: 1px solid $white;
+                }
+            }
+        }
+    }
+    .related{
+        .heading {
+                @include heading;
+            }
+        
+            .imgs {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+        
+                a {
+                    position: relative;
+                    transition: $transition-long;
+        
+                    img {
+                        border-radius: 5px;
+                        width: 220px;
+                        height: 250px
+                    }
+        
+                    i {
+                        @include play-icon;
+                    }
+                }
+        
+                a::before {
+                    @include item-before(250px);
+                }
+        
+                a:hover::before {
+                    opacity: 1;
+                }
+        
+                a:hover i {
+                    opacity: 1;
+                }
+            }
     }
 }

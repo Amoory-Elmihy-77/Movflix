@@ -29,4 +29,22 @@ function showTrail(eid, api_key) {
         .catch(error => console.error('Error fetching the trailers:', error));
 }
 
-export { showTrail };
+function handleSearch() {
+    const searchIcon = document.querySelector('#search .open');
+const searchInput = document.querySelector('#search input');
+const searchClose = document.querySelector('#search .close');
+    searchIcon.addEventListener("click", () => {
+        searchIcon.style.display = 'none';
+        searchClose.style.display = 'block';
+        searchInput.style.display = 'block';
+        searchInput.style.opacity = '1';
+    });
+    searchClose.addEventListener("click", () => {
+        searchIcon.style.display = 'block';
+        searchClose.style.display = 'none';
+        searchInput.style.opacity = '0';
+        searchInput.style.display = 'none';
+    });
+}
+
+export { showTrail, handleSearch };

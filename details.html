@@ -11,7 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body class="home">
+  <body class="details">
     <header>
       <nav>
         <a href="./home.html" class="logo"
@@ -25,34 +25,22 @@
       </nav>
       <div class="details">
         <h2 class="title"></h2>
+        <div class="type">
+          <span class="type1"></span><span class="type2"></span>
+        </div>
         <p class="overview"></p>
-        <a><button id="more">More</button></a>
+        <div class="on">
+          <a id="play">
+            <button><i class="fa-solid fa-play"></i> Play</button>
+          </a>
+          <button id="trail"><i class="fa-solid fa-film"></i> Trailer</button>
+        </div>
       </div>
     </header>
-    <section class="trending">
-      <h2 class="heading">Trending Now</h2>
+    <section class="related">
+      <h2 class="heading">Related Results</h2>
       <div class="imgs"></div>
     </section>
-    <section class="pop-movies">
-      <h2 class="heading">Popular Movies</h2>
-      <div class="imgs"></div>
-    </section>
-    <section class="pop-series">
-      <h2 class="heading">Popular Series</h2>
-      <div class="imgs"></div>
-    </section>
-    <section class="top-movies">
-      <h2 class="heading">Top Related Movies</h2>
-      <div class="imgs"></div>
-    </section>
-    <section class="top-show">
-      <h2 class="heading">Top Related TV-Show</h2>
-      <div class="imgs"></div>
-    </section>
-    <div class="upcoming">
-      <h2 class="heading">Upcoming Movies</h2>
-      <div class="imgs"></div>
-    </div>
     <footer>
       <div class="name">This is made by <span>Ammar Elmihy</span></div>
       <div class="links">
@@ -72,7 +60,7 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
     </div>
-    <script type="module" src="./asstes/js/home.js"></script>
+    <script type="module" src="./asstes/js/details.js"></script>
     <script type="module" src="./asstes/js/global.js"></script>
     <script type="module" src="./asstes/js/auth.js"></script>
   </body>
