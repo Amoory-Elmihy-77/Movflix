@@ -307,10 +307,15 @@ body {
 .home header nav #search #res a,
 .details header nav #search #res a {
   display: flex;
+  transition: 0.5s;
 }
 .home header nav #search #res a:not(:last-child),
 .details header nav #search #res a:not(:last-child) {
   margin-bottom: 10px;
+}
+.home header nav #search #res a:hover,
+.details header nav #search #res a:hover {
+  background-color: hsl(250, 2%, 59%);
 }
 .home header nav #search #res a img,
 .details header nav #search #res a img {

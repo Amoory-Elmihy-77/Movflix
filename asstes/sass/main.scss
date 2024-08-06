@@ -164,8 +164,12 @@ body{
                     border-radius: 8px;
                     a{
                         display: flex;
+                        transition: $transition-long;
                         &:not(:last-child){
                             margin-bottom: 10px;
+                        }
+                        &:hover{
+                            background-color: $text-color;
                         }
                         img{
                         width: 50px;

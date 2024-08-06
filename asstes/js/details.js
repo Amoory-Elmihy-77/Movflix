@@ -38,7 +38,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}`).then(r
     document.querySelector('.details header .type2').innerHTML = type2;
     document.querySelector('.details header .overview').innerHTML = overview;
     document.getElementById('trail').addEventListener("click", () => {
-        showTrail(movieId, api_key)
+        showTrail(movieId, api_key);
     });
     document.getElementById('play').href = `../../watch.html?id=${movieId}`;
     let img = `${base_url}${backdrop_size}${data_poster}`;
@@ -52,6 +52,7 @@ get(relatedRes, (data) => {
     data.results.length = 8;
     related.innerHTML = '';
     data.results.forEach(element => {
+        console.log(element);
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         if (data_poster == null)

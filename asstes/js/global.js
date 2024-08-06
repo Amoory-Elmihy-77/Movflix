@@ -39,6 +39,7 @@ function handleSearch() {
         searchClose.style.display = 'block';
         searchInput.style.display = 'block';
         searchInput.style.opacity = '1';
+        searchInput.focus();
     });
     searchClose.addEventListener("click", () => {
         searchIcon.style.display = 'block';
