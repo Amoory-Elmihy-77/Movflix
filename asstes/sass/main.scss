@@ -97,7 +97,8 @@ body{
 /// home style
 ////////////////////////*/
 .home,
-.details{
+.details,
+.watch{
     position: relative;
     header{
         @include section-padding;
@@ -434,6 +435,25 @@ body{
             a:hover i{
                 opacity: 1;
             }
+        }
+    }
+}
+
+/*////////////////////////
+/// details style
+////////////////////////*/
+.watch{
+    #watch{
+        height: 81.55vh;
+        @include flex-center;
+        iframe{
+            border: none;
+            width: 850px;
+            height: 80%;
+            @include breakpoint(large){width: 70%; height: 70%;}
+            @include breakpoint(medium){width: 80%; height: 60%;}
+            @include breakpoint(small){width: 90%; height: 60%;}
+            @include breakpoint(mobile){width: 95%; height: 50%;}
         }
     }
 }

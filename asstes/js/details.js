@@ -52,7 +52,7 @@ get(relatedRes, (data) => {
     data.results.length = 8;
     related.innerHTML = '';
     data.results.forEach(element => {
-        console.log(element);
+        // console.log(element);
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         if (data_poster == null)

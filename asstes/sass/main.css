@@ -188,11 +188,13 @@ body {
 /// home style
 ////////////////////////*/
 .home,
-.details {
+.details,
+.watch {
   position: relative;
 }
 .home header,
-.details header {
+.details header,
+.watch header {
   padding-left: 200px;
   padding-right: 200px;
   position: relative;
@@ -201,31 +203,36 @@ body {
 }
 @media (max-width: 767px) {
   .home header,
-  .details header {
+  .details header,
+  .watch header {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .home header,
-  .details header {
+  .details header,
+  .watch header {
     padding-right: 40px;
     padding-left: 40px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home header,
-  .details header {
+  .details header,
+  .watch header {
     padding-right: 60px;
     padding-left: 60px;
   }
 }
 .home header *,
-.details header * {
+.details header *,
+.watch header * {
   z-index: 2;
 }
 .home header::before,
-.details header::before {
+.details header::before,
+.watch header::before {
   content: "";
   width: 100%;
   height: 30%;
@@ -235,7 +242,8 @@ body {
   left: 0;
 }
 .home header::after,
-.details header::after {
+.details header::after,
+.watch header::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -248,7 +256,8 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .home header nav,
-.details header nav {
+.details header nav,
+.watch header nav {
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
@@ -257,13 +266,15 @@ body {
 }
 @media (max-width: 767px) {
   .home header nav,
-  .details header nav {
+  .details header nav,
+  .watch header nav {
     flex-direction: column;
     gap: 10px;
   }
 }
 .home header nav #search,
-.details header nav #search {
+.details header nav #search,
+.watch header nav #search {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,7 +283,8 @@ body {
   z-index: 100;
 }
 .home header nav #search input,
-.details header nav #search input {
+.details header nav #search input,
+.watch header nav #search input {
   background-color: transparent;
   padding: 10px;
   font-size: 18px;
@@ -284,17 +296,20 @@ body {
   transition: opacity 0.5s;
 }
 .home header nav #search i,
-.details header nav #search i {
+.details header nav #search i,
+.watch header nav #search i {
   color: hsl(250, 2%, 59%);
   font-size: 25px;
   cursor: pointer;
 }
 .home header nav #search .close,
-.details header nav #search .close {
+.details header nav #search .close,
+.watch header nav #search .close {
   display: none;
 }
 .home header nav #search #res,
-.details header nav #search #res {
+.details header nav #search #res,
+.watch header nav #search #res {
   position: absolute;
   top: 55px;
   right: -2px;
@@ -305,30 +320,36 @@ body {
   border-radius: 8px;
 }
 .home header nav #search #res a,
-.details header nav #search #res a {
+.details header nav #search #res a,
+.watch header nav #search #res a {
   display: flex;
   transition: 0.5s;
 }
 .home header nav #search #res a:not(:last-child),
-.details header nav #search #res a:not(:last-child) {
+.details header nav #search #res a:not(:last-child),
+.watch header nav #search #res a:not(:last-child) {
   margin-bottom: 10px;
 }
 .home header nav #search #res a:hover,
-.details header nav #search #res a:hover {
+.details header nav #search #res a:hover,
+.watch header nav #search #res a:hover {
   background-color: hsl(250, 2%, 59%);
 }
 .home header nav #search #res a img,
-.details header nav #search #res a img {
+.details header nav #search #res a img,
+.watch header nav #search #res a img {
   width: 50px;
   height: 60px;
   margin-right: 15px;
 }
 .home header nav #search #res a .info,
-.details header nav #search #res a .info {
+.details header nav #search #res a .info,
+.watch header nav #search #res a .info {
   padding-top: 3px;
 }
 .home header .details,
-.details header .details {
+.details header .details,
+.watch header .details {
   min-height: 40vh;
   display: flex;
   flex-direction: column;
@@ -337,19 +358,22 @@ body {
   padding-bottom: 20px;
 }
 .home header .details .title,
-.details header .details .title {
+.details header .details .title,
+.watch header .details .title {
   color: hsl(0, 0%, 100%);
   font-size: 30px;
   margin-bottom: 20px;
 }
 .home header .details .overview,
-.details header .details .overview {
+.details header .details .overview,
+.watch header .details .overview {
   color: hsl(250, 2%, 59%);
   font-size: 18px;
   margin-bottom: 10px;
 }
 .home header .details #more,
-.details header .details #more {
+.details header .details #more,
+.watch header .details #more {
   min-width: 200px;
   text-align: center;
   font-size: 20px;
@@ -358,7 +382,9 @@ body {
 .home section,
 .home .upcoming,
 .details section,
-.details .upcoming {
+.details .upcoming,
+.watch section,
+.watch .upcoming {
   margin: 50px 0 10px 0;
   padding-left: 200px;
   padding-right: 200px;
@@ -367,7 +393,9 @@ body {
   .home section,
   .home .upcoming,
   .details section,
-  .details .upcoming {
+  .details .upcoming,
+  .watch section,
+  .watch .upcoming {
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -376,7 +404,9 @@ body {
   .home section,
   .home .upcoming,
   .details section,
-  .details .upcoming {
+  .details .upcoming,
+  .watch section,
+  .watch .upcoming {
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -385,7 +415,9 @@ body {
   .home section,
   .home .upcoming,
   .details section,
-  .details .upcoming {
+  .details .upcoming,
+  .watch section,
+  .watch .upcoming {
     padding-right: 60px;
     padding-left: 60px;
   }
@@ -395,7 +427,10 @@ body {
 .home .pop-series .heading,
 .details .trending .heading,
 .details .pop-movies .heading,
-.details .pop-series .heading {
+.details .pop-series .heading,
+.watch .trending .heading,
+.watch .pop-movies .heading,
+.watch .pop-series .heading {
   color: hsl(0, 0%, 100%);
   padding: 10px 10px 10px 20px;
   border-left: 10px solid hsl(349, 100%, 43%);
@@ -406,7 +441,10 @@ body {
 .home .pop-series .imgs,
 .details .trending .imgs,
 .details .pop-movies .imgs,
-.details .pop-series .imgs {
+.details .pop-series .imgs,
+.watch .trending .imgs,
+.watch .pop-movies .imgs,
+.watch .pop-series .imgs {
   display: flex;
   gap: 10px;
   overflow-x: auto;
@@ -416,7 +454,10 @@ body {
 .home .pop-series .imgs a,
 .details .trending .imgs a,
 .details .pop-movies .imgs a,
-.details .pop-series .imgs a {
+.details .pop-series .imgs a,
+.watch .trending .imgs a,
+.watch .pop-movies .imgs a,
+.watch .pop-series .imgs a {
   position: relative;
   transition: 0.5s;
 }
@@ -425,7 +466,10 @@ body {
 .home .pop-series .imgs a img,
 .details .trending .imgs a img,
 .details .pop-movies .imgs a img,
-.details .pop-series .imgs a img {
+.details .pop-series .imgs a img,
+.watch .trending .imgs a img,
+.watch .pop-movies .imgs a img,
+.watch .pop-series .imgs a img {
   border-radius: 5px;
   width: 220px;
   height: 250px;
@@ -435,7 +479,10 @@ body {
 .home .pop-series .imgs a i,
 .details .trending .imgs a i,
 .details .pop-movies .imgs a i,
-.details .pop-series .imgs a i {
+.details .pop-series .imgs a i,
+.watch .trending .imgs a i,
+.watch .pop-movies .imgs a i,
+.watch .pop-series .imgs a i {
   position: absolute;
   font-size: 30px;
   color: hsl(44, 100%, 49%);
@@ -450,7 +497,10 @@ body {
 .home .pop-series .imgs a::before,
 .details .trending .imgs a::before,
 .details .pop-movies .imgs a::before,
-.details .pop-series .imgs a::before {
+.details .pop-series .imgs a::before,
+.watch .trending .imgs a::before,
+.watch .pop-movies .imgs a::before,
+.watch .pop-series .imgs a::before {
   content: "";
   color: hsl(44, 100%, 49%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -471,7 +521,10 @@ body {
 .home .pop-series .imgs a:hover::before,
 .details .trending .imgs a:hover::before,
 .details .pop-movies .imgs a:hover::before,
-.details .pop-series .imgs a:hover::before {
+.details .pop-series .imgs a:hover::before,
+.watch .trending .imgs a:hover::before,
+.watch .pop-movies .imgs a:hover::before,
+.watch .pop-series .imgs a:hover::before {
   opacity: 1;
 }
 .home .trending .imgs a:hover i,
@@ -479,13 +532,18 @@ body {
 .home .pop-series .imgs a:hover i,
 .details .trending .imgs a:hover i,
 .details .pop-movies .imgs a:hover i,
-.details .pop-series .imgs a:hover i {
+.details .pop-series .imgs a:hover i,
+.watch .trending .imgs a:hover i,
+.watch .pop-movies .imgs a:hover i,
+.watch .pop-series .imgs a:hover i {
   opacity: 1;
 }
 .home .top-show .heading,
 .home .top-movies .heading,
 .details .top-show .heading,
-.details .top-movies .heading {
+.details .top-movies .heading,
+.watch .top-show .heading,
+.watch .top-movies .heading {
   color: hsl(0, 0%, 100%);
   padding: 10px 10px 10px 20px;
   border-left: 10px solid hsl(349, 100%, 43%);
@@ -494,7 +552,9 @@ body {
 .home .top-show .imgs,
 .home .top-movies .imgs,
 .details .top-show .imgs,
-.details .top-movies .imgs {
+.details .top-movies .imgs,
+.watch .top-show .imgs,
+.watch .top-movies .imgs {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -504,7 +564,9 @@ body {
 .home .top-show .imgs a,
 .home .top-movies .imgs a,
 .details .top-show .imgs a,
-.details .top-movies .imgs a {
+.details .top-movies .imgs a,
+.watch .top-show .imgs a,
+.watch .top-movies .imgs a {
   position: relative;
   transition: 0.5s;
   width: 250px;
@@ -512,7 +574,9 @@ body {
 .home .top-show .imgs a img,
 .home .top-movies .imgs a img,
 .details .top-show .imgs a img,
-.details .top-movies .imgs a img {
+.details .top-movies .imgs a img,
+.watch .top-show .imgs a img,
+.watch .top-movies .imgs a img {
   width: 100%;
   height: 250px;
   border-radius: 5px;
@@ -520,7 +584,9 @@ body {
 .home .top-show .imgs a i,
 .home .top-movies .imgs a i,
 .details .top-show .imgs a i,
-.details .top-movies .imgs a i {
+.details .top-movies .imgs a i,
+.watch .top-show .imgs a i,
+.watch .top-movies .imgs a i {
   position: absolute;
   font-size: 30px;
   color: hsl(44, 100%, 49%);
@@ -533,7 +599,9 @@ body {
 .home .top-show .imgs a .number,
 .home .top-movies .imgs a .number,
 .details .top-show .imgs a .number,
-.details .top-movies .imgs a .number {
+.details .top-movies .imgs a .number,
+.watch .top-show .imgs a .number,
+.watch .top-movies .imgs a .number {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -552,7 +620,9 @@ body {
 .home .top-show .imgs a p,
 .home .top-movies .imgs a p,
 .details .top-show .imgs a p,
-.details .top-movies .imgs a p {
+.details .top-movies .imgs a p,
+.watch .top-show .imgs a p,
+.watch .top-movies .imgs a p {
   font-size: 20px;
   font-weight: bold;
   color: hsl(0, 0%, 100%);
@@ -560,7 +630,9 @@ body {
 .home .top-show .imgs a::before,
 .home .top-movies .imgs a::before,
 .details .top-show .imgs a::before,
-.details .top-movies .imgs a::before {
+.details .top-movies .imgs a::before,
+.watch .top-show .imgs a::before,
+.watch .top-movies .imgs a::before {
   content: "";
   color: hsl(44, 100%, 49%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -579,24 +651,30 @@ body {
 .home .top-show .imgs a:hover::before,
 .home .top-movies .imgs a:hover::before,
 .details .top-show .imgs a:hover::before,
-.details .top-movies .imgs a:hover::before {
+.details .top-movies .imgs a:hover::before,
+.watch .top-show .imgs a:hover::before,
+.watch .top-movies .imgs a:hover::before {
   opacity: 1;
 }
 .home .top-show .imgs a:hover i,
 .home .top-movies .imgs a:hover i,
 .details .top-show .imgs a:hover i,
-.details .top-movies .imgs a:hover i {
+.details .top-movies .imgs a:hover i,
+.watch .top-show .imgs a:hover i,
+.watch .top-movies .imgs a:hover i {
   opacity: 1;
 }
 .home .upcoming .heading,
-.details .upcoming .heading {
+.details .upcoming .heading,
+.watch .upcoming .heading {
   color: hsl(0, 0%, 100%);
   padding: 10px 10px 10px 20px;
   border-left: 10px solid hsl(349, 100%, 43%);
   margin-bottom: 10px;
 }
 .home .upcoming .imgs,
-.details .upcoming .imgs {
+.details .upcoming .imgs,
+.watch .upcoming .imgs {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -604,19 +682,22 @@ body {
   flex-wrap: wrap;
 }
 .home .upcoming .imgs a,
-.details .upcoming .imgs a {
+.details .upcoming .imgs a,
+.watch .upcoming .imgs a {
   position: relative;
   transition: 0.5s;
   width: 300px;
 }
 .home .upcoming .imgs a img,
-.details .upcoming .imgs a img {
+.details .upcoming .imgs a img,
+.watch .upcoming .imgs a img {
   width: 100%;
   height: 250px;
   border-radius: 5px;
 }
 .home .upcoming .imgs a i,
-.details .upcoming .imgs a i {
+.details .upcoming .imgs a i,
+.watch .upcoming .imgs a i {
   position: absolute;
   font-size: 30px;
   color: hsl(44, 100%, 49%);
@@ -629,7 +710,8 @@ body {
   font-size: 35px;
 }
 .home .upcoming .imgs a::before,
-.details .upcoming .imgs a::before {
+.details .upcoming .imgs a::before,
+.watch .upcoming .imgs a::before {
   content: "";
   color: hsl(44, 100%, 49%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -647,7 +729,8 @@ body {
   opacity: 1;
 }
 .home footer,
-.details footer {
+.details footer,
+.watch footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -657,38 +740,45 @@ body {
 }
 @media (max-width: 767px) {
   .home footer,
-  .details footer {
+  .details footer,
+  .watch footer {
     flex-direction: column;
     gap: 20px;
   }
 }
 .home footer .name,
-.details footer .name {
+.details footer .name,
+.watch footer .name {
   font-size: 22px;
   color: hsl(250, 2%, 59%);
 }
 .home footer .name span,
-.details footer .name span {
+.details footer .name span,
+.watch footer .name span {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
 }
 .home footer .links,
-.details footer .links {
+.details footer .links,
+.watch footer .links {
   font-size: 22px;
   color: hsl(0, 0%, 100%);
   display: flex;
   gap: 20px;
 }
 .home footer .links a,
-.details footer .links a {
+.details footer .links a,
+.watch footer .links a {
   transition: 0.3s;
 }
 .home footer .links a:hover,
-.details footer .links a:hover {
+.details footer .links a:hover,
+.watch footer .links a:hover {
   color: hsl(250, 2%, 59%);
 }
 .home #trailers,
-.details #trailers {
+.details #trailers,
+.watch #trailers {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -703,64 +793,74 @@ body {
   display: none;
 }
 .home #trailers .close,
-.details #trailers .close {
+.details #trailers .close,
+.watch #trailers .close {
   padding: 20px 30px;
   width: 70%;
   text-align: end;
 }
 @media (max-width: 767px) {
   .home #trailers .close,
-  .details #trailers .close {
+  .details #trailers .close,
+  .watch #trailers .close {
     width: 100%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home #trailers .close,
-  .details #trailers .close {
+  .details #trailers .close,
+  .watch #trailers .close {
     width: 80%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .home #trailers .close,
-  .details #trailers .close {
+  .details #trailers .close,
+  .watch #trailers .close {
     width: 90%;
   }
 }
 .home #trailers .close i,
-.details #trailers .close i {
+.details #trailers .close i,
+.watch #trailers .close i {
   font-size: 30px;
   color: hsl(250, 2%, 59%);
   cursor: pointer;
 }
 .home #trailers .trail-container,
-.details #trailers .trail-container {
+.details #trailers .trail-container,
+.watch #trailers .trail-container {
   width: 70%;
   height: 60%;
   overflow: auto;
 }
 @media (max-width: 767px) {
   .home #trailers .trail-container,
-  .details #trailers .trail-container {
+  .details #trailers .trail-container,
+  .watch #trailers .trail-container {
     width: 100%;
     height: 30%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .home #trailers .trail-container,
-  .details #trailers .trail-container {
+  .details #trailers .trail-container,
+  .watch #trailers .trail-container {
     width: 80%;
     height: 40%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .home #trailers .trail-container,
-  .details #trailers .trail-container {
+  .details #trailers .trail-container,
+  .watch #trailers .trail-container {
     width: 90%;
     height: 50%;
   }
 }
 .home #trailers .trail-container iframe,
-.details #trailers .trail-container iframe {
+.details #trailers .trail-container iframe,
+.watch #trailers .trail-container iframe {
   width: 100%;
   height: 100%;
 }
@@ -847,4 +947,43 @@ body {
 }
 .details .related .imgs a:hover i {
   opacity: 1;
+}
+
+/*////////////////////////
+/// details style
+////////////////////////*/
+.watch #watch {
+  height: 81.55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch #watch iframe {
+  border: none;
+  width: 850px;
+  height: 80%;
+}
+@media (min-width: 1200px) {
+  .watch #watch iframe {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .watch #watch iframe {
+    width: 80%;
+    height: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .watch #watch iframe {
+    width: 90%;
+    height: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .watch #watch iframe {
+    width: 95%;
+    height: 50%;
+  }
 }/*# sourceMappingURL=main.css.map */
