@@ -36,6 +36,7 @@ handleSearch();
 get(trend_endpoint, (data) => {
     trending.innerHTML = '';
     data.results.forEach(element => {
+        if (element.media_type == "movie") {
         let data_poster = element.poster_path;
         let img = `${base_url}${backdrop_size}${data_poster}`;
         trending.innerHTML += `
@@ -44,6 +45,7 @@ get(trend_endpoint, (data) => {
             <img src="${img}" alt="" />
         </a>
         `;
+        }
     });
 });
 get(popular_movies, (data) => {
