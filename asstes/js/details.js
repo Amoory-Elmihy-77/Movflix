@@ -40,7 +40,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}`).then(r
     document.getElementById('trail').addEventListener("click", () => {
         showTrail(movieId, api_key);
     });
-    document.getElementById('play').href = `../../watch.html?id=${movieId}`;
+    document.getElementById('play').href = `/Movflix/watch.html?id=${movieId}`;
     let img = `${base_url}${backdrop_size}${data_poster}`;
     header.style.backgroundImage = `url(${img})`;
     }).catch(error => console.error('Error fetching the movie details:', error));
@@ -58,7 +58,7 @@ get(relatedRes, (data) => {
         if (data_poster == null)
             return;
         related.innerHTML += `
-        <a href="../../details.html?id=${element.id}">
+        <a href="/Movflix/details.html?id=${element.id}">
             <i class="fa-solid fa-play"></i>
             <img src="${img}" alt="" />
         </a>

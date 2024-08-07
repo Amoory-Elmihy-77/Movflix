@@ -81,7 +81,7 @@ function handleSearch() {
                 }
                 const releaseDate = ele.release_date || ele.first_air_date || "N/A";
                 res.innerHTML += `
-                    <a href="../../details.html?id=${ele.id}">
+                    <a href="/Movflix/details.html?id=${ele.id}">
                       <img src="https://image.tmdb.org/t/p/w500${posterPath}" />
                       <div class="info">
                         <div class="name">${title}</div>
